@@ -1,0 +1,33 @@
+page-home {
+    //@import "compass/css3";
+
+    @mixin linear-gradient-b($args...) {
+    background-image: -o-linear-gradient($args); 
+    background-image: -moz-linear-gradient($args); 
+    background-image: -webkit-linear-gradient($args); 
+    background-image: linear-gradient($args); 
+    }
+
+
+
+    .gradient {
+    @include linear-gradient-b(180deg, green, white);
+    }
+
+    .codeQR{
+        margin-top: 50px;
+        border-style: solid, 2px;
+        height: 200px;
+        width: 200px;
+        margin-left: 50px;
+        border-radius: 100%;
+        color: green;
+    }
+
+    .afterQR{
+        padding-top: 80px;
+    }
+
+    .thecode{
+    }
+}

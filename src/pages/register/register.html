@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="gradient">
+  <ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked color="dark">PRENOM NOM</ion-label>
+        <ion-input type="text" [(ngModel)]="nom" placeholder="Prenom Nom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="dark">EMAIL / COURRIEL</ion-label>
+        <ion-input type="text" [(ngModel)]="courriel" placeholder="xyz@abc.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked color="dark">NUMERO DE TELEPHONE</ion-label>
+        <ion-input type="tel" [(ngModel)]="numTel" placeholder=""></ion-input>
+        <ion-input type="tel" [(ngModel)]="nu" placeholder="" item-end></ion-input>
+      </ion-item>
+      <ion-item>
+        <!-->Le bouton s'affiche uniquement quand tout les champs sont remplis, cet option oblige lutilisateur a remplir tout
+        les champs avant d'avoir acces au bouton. Evite tout risque de planter l'application avec qu'en utilisant la propriété
+        required qui laisse à l'utilisateur la possibilité de cliquer sur le bouton
+        <-->
+          <button *ngIf="nom && courriel && numTel" ion-button color="themegreen" block large (tap)="sinscrire()">S'inscrire</button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>

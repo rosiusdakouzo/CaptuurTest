@@ -1,0 +1,19 @@
+page-register {
+    @mixin linear-gradient-b($args...) {
+    background-image: -o-linear-gradient($args); 
+    background-image: -moz-linear-gradient($args); 
+    background-image: -webkit-linear-gradient($args); 
+    background-image: linear-gradient($args); 
+    }
+
+
+
+    .gradient {
+    @include linear-gradient-b(180deg, green, white);
+    }
+
+    ion-navbar{
+        background-color: green;
+    }
+    
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="gradient">
+  <p>
+    Merci pour votre inscription. Le codeQR associé à votre compte est généréci-dessous. Utilisez le à chaque fois pour recevoir
+    vos reçu d'achat
+  </p>
+  <ion-card *ngIf="createdCode" class="codeQR">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p class="thecode">Value: {{ createdCode }}</p>
+    </ion-card-content>
+  </ion-card>
+  <p class="afterQR">
+    Vous avez une carte Captuur ?
+    <br>
+    <strong>Scanner le code QR</strong>
+  </p>
+</ion-content>
